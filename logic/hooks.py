@@ -259,5 +259,18 @@ fixtures = [
         "filters": [
             ["module", "=", "logic"]
         ]
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["module", "=", "logic"]
+        ]
+    },
+    {
+        "dt": "DocType",
+        "filters": [
+            ["custom", "=", 1]
+        ]
     }
 ]
+
