@@ -253,5 +253,11 @@ fixtures = [
         "filters": [
             ["module", "=", "logic"]
         ]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["module", "=", "logic"]
+        ]
     }
 ]
