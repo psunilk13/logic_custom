@@ -271,6 +271,10 @@ fixtures = [
         "filters": [
             ["custom", "=", 1]
         ]
+    },
+    {
+        "dt": "Workflow",
+        "filters": []
     }
 ]
 
