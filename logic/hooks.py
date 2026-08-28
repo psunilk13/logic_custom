@@ -286,6 +286,30 @@ fixtures = [
         "filters": [
             ["is_standard", "=", "No"]
         ]
+    },
+    {
+        "dt": "Module Def",
+        "filters": [
+            ["name", "in", [
+                "FPS",
+                "Health Management",
+                "Feed Management",
+                "Water Management"
+            ]],
+            ["app_name", "=", "frappe"],
+            ["custom", "=", 1]
+        ]
+    },
+    {
+        "dt": "Workspace",
+        "filters": [
+            ["name", "in", [
+                "FPS",
+                "Health Management",
+                "Feed Management",
+                "Water Management"
+            ]]
+        ]
     }
 ]
 

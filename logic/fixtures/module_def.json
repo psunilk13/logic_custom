@@ -1,0 +1,62 @@
+[
+ {
+  "_assign": null,
+  "_comments": null,
+  "_liked_by": null,
+  "_user_tags": null,
+  "app_name": "frappe",
+  "custom": 1,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2026-02-11 12:50:55.948945",
+  "module_name": "Water Management",
+  "name": "Water Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "_assign": null,
+  "_comments": null,
+  "_liked_by": null,
+  "_user_tags": null,
+  "app_name": "frappe",
+  "custom": 1,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2026-02-11 13:27:30.377816",
+  "module_name": "Feed Management",
+  "name": "Feed Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "_assign": null,
+  "_comments": null,
+  "_liked_by": null,
+  "_user_tags": null,
+  "app_name": "frappe",
+  "custom": 1,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2026-02-11 14:44:51.874312",
+  "module_name": "Health Management",
+  "name": "Health Management",
+  "package": null,
+  "restrict_to_domain": null
+ },
+ {
+  "_assign": null,
+  "_comments": null,
+  "_liked_by": null,
+  "_user_tags": null,
+  "app_name": "frappe",
+  "custom": 1,
+  "docstatus": 0,
+  "doctype": "Module Def",
+  "modified": "2026-04-24 10:02:55.060506",
+  "module_name": "FPS",
+  "name": "FPS",
+  "package": null,
+  "restrict_to_domain": null
+ }
+]
