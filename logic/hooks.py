@@ -310,7 +310,28 @@ fixtures = [
                 "Water Management"
             ]]
         ]
-    }
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [
+            ["name", "in", [
+                "Submitted",
+                "Draft",
+                "Open",
+                "Completed",
+                "Cement Tank",
+                "FRB",
+                "18 Liter Carboy",
+                "2L Flask",
+                "Conical Flask",
+                "Flask",
+                "Test Tube",
+                "Rejected",
+                "Approved",
+                "Pending"
+            ]]
+        ]
+    },
 ]
 
 

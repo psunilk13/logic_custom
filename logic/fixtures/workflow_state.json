@@ -1,0 +1,128 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2026-01-06 17:11:27.612670",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2026-01-06 17:11:27.615311",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2026-01-06 17:11:27.616886",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:49:26.702935",
+  "name": "Flask",
+  "style": "",
+  "workflow_state_name": "Flask"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-23 12:13:02.100984",
+  "name": "Submitted",
+  "style": "",
+  "workflow_state_name": "Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:48:52.624398",
+  "name": "Test Tube",
+  "style": "",
+  "workflow_state_name": "Test Tube"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:53:05.559654",
+  "name": "18 Liter Carboy",
+  "style": "",
+  "workflow_state_name": "18 Liter Carboy"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:53:55.074381",
+  "name": "Cement Tank",
+  "style": "",
+  "workflow_state_name": "Cement Tank"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-23 12:10:26.012860",
+  "name": "Completed",
+  "style": "",
+  "workflow_state_name": "Completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:51:43.966461",
+  "name": "Conical Flask",
+  "style": "",
+  "workflow_state_name": "Conical Flask"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:52:28.172750",
+  "name": "2L Flask",
+  "style": "",
+  "workflow_state_name": "2L Flask"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-23 12:12:50.358969",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-06 18:53:34.478952",
+  "name": "FRB",
+  "style": "",
+  "workflow_state_name": "FRB"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-07-23 12:10:39.969875",
+  "name": "Open",
+  "style": "",
+  "workflow_state_name": "Open"
+ }
+]
