@@ -273,7 +273,21 @@ fixtures = [
     {
         "dt": "Workflow",
         "filters": []
+    },
+    {
+        "dt": "Report",
+        "filters": [
+            ["report_type", "=", "Query Report"],
+            ["is_standard", "=", "No"]
+        ]
+    },
+    {
+        "dt": "Dashboard Chart",
+        "filters": [
+            ["is_standard", "=", "No"]
+        ]
     }
 ]
+
 
 
