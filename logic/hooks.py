@@ -332,6 +332,12 @@ fixtures = [
             ]]
         ]
     },
+    {   
+        "dt": "Number Card",
+        "filters": [
+            ["is_standard", "=", 0]
+        ]
+    }
 ]
 
 
