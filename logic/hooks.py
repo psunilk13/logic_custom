@@ -300,17 +300,7 @@ fixtures = [
             ["custom", "=", 1]
         ]
     },
-    {
-        "dt": "Workspace",
-        "filters": [
-            ["name", "in", [
-                "FPS",
-                "Health Management",
-                "Feed Management",
-                "Water Management"
-            ]]
-        ]
-    },
+
     {
         "dt": "Workflow State",
         "filters": [
@@ -330,12 +320,6 @@ fixtures = [
                 "Approved",
                 "Pending"
             ]]
-        ]
-    },
-    {   
-        "dt": "Number Card",
-        "filters": [
-            ["is_standard", "=", 0]
         ]
     }
 ]

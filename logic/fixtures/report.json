@@ -8,6 +8,211 @@
   "docstatus": 0,
   "doctype": "Report",
   "doctype_to_sync": [],
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "DEENAJ",
+  "modified": "2026-09-21 17:07:17.455928",
+  "module": "Manufacturing",
+  "name": "Total Algae Production",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    COALESCE(SUM(item.volume), 0) AS total_volume\r\nFROM\r\n    `tabAlgae Harvest Entry` AS entry\r\nINNER JOIN\r\n    `tabAlgae Harvest Item` AS item\r\n        ON item.parent = entry.name\r\nWHERE\r\n    entry.docstatus = 1\r\n    AND entry.posting_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)",
+  "ref_doctype": "Algae Harvest Entry",
+  "reference_report": null,
+  "report_name": "Total Algae Production",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Total Algae Production",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Total Algae Production",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Section Boy"
+   },
+   {
+    "parent": "Total Algae Production",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Manufacturing Manager"
+   }
+  ],
+  "snapshot_report": 0,
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "doctype_to_sync": [],
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "DEENAJ",
+  "modified": "2026-09-21 17:21:39.910800",
+  "module": "Feed Management",
+  "name": "Algae Consumption",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    COALESCE(SUM(detail.planned_qty), 0) / 1000 AS total_planned_tons\r\nFROM\r\n    `tabFeed Schedule` AS parent\r\nINNER JOIN\r\n    `tabFeed Schedule Detail` AS detail\r\n        ON detail.parent = parent.name\r\nWHERE\r\n    parent.docstatus = 1\r\n    AND parent.schedule_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)",
+  "ref_doctype": "Feed Schedule",
+  "reference_report": null,
+  "report_name": "Algae Consumption",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Algae Consumption",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Algae Consumption",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Section Boy"
+   }
+  ],
+  "snapshot_report": 0,
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "doctype_to_sync": [],
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "DEENAJ",
+  "modified": "2026-09-21 17:25:00.571339",
+  "module": "Manufacturing",
+  "name": "Algae Balance",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    (\r\n        COALESCE((\r\n            SELECT SUM(item.volume)\r\n            FROM `tabAlgae Harvest Entry` AS entry\r\n            INNER JOIN `tabAlgae Harvest Item` AS item\r\n                ON item.parent = entry.name\r\n            WHERE\r\n                entry.docstatus = 1\r\n                AND entry.posting_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)\r\n        ), 0)\r\n        -\r\n        COALESCE((\r\n            SELECT SUM(detail.planned_qty) / 1000\r\n            FROM `tabFeed Schedule` AS parent\r\n            INNER JOIN `tabFeed Schedule Detail` AS detail\r\n                ON detail.parent = parent.name\r\n            WHERE\r\n                parent.docstatus = 1\r\n                AND parent.schedule_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)\r\n        ), 0)\r\n    ) AS remaining_tons",
+  "ref_doctype": "Algae Harvest Entry",
+  "reference_report": null,
+  "report_name": "Algae Balance",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Algae Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Algae Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Section Boy"
+   },
+   {
+    "parent": "Algae Balance",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Manufacturing Manager"
+   }
+  ],
+  "snapshot_report": 0,
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "doctype_to_sync": [],
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "DEENAJ",
+  "modified": "2026-09-21 17:59:41.854327",
+  "module": "Water Management",
+  "name": "No of Batches",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    COUNT(name) AS running_count\r\nFROM\r\n    `tabTank Stocking`\r\nWHERE\r\n    docstatus = 1\r\n    AND running_status = 'Running'",
+  "ref_doctype": "Tank Stocking",
+  "reference_report": null,
+  "report_name": "No of Batches",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "No of Batches",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "snapshot_report": 0,
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "doctype_to_sync": [],
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": "DEENAJ",
+  "modified": "2026-09-21 18:04:36.324392",
+  "module": "Water Management",
+  "name": "No of Active Tanks",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    COUNT(detail.name) AS total_tanks\r\nFROM\r\n    `tabTank Stocking` AS parent\r\nINNER JOIN\r\n    `tabtankwise quantity` AS detail\r\n        ON detail.parent = parent.name\r\nWHERE\r\n    parent.docstatus = 1\r\n    AND parent.running_status = 'Running'",
+  "ref_doctype": "Tank Stocking",
+  "reference_report": null,
+  "report_name": "No of Active Tanks",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "No of Active Tanks",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "snapshot_report": 0,
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disable_prepared_report_automation": 0,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "doctype_to_sync": [],
   "filters": [
    {
     "default": null,
