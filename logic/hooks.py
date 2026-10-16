@@ -261,6 +261,12 @@ fixtures = [
         ]
     },
     {
+        "dt": "Property Setter",
+        "filters": [
+            ["module", "=", "logic"]
+        ]
+    },
+    {
         "dt": "Custom Field",
         "filters": []
     },
@@ -300,7 +306,6 @@ fixtures = [
             ["custom", "=", 1]
         ]
     },
-
     {
         "dt": "Workflow State",
         "filters": [
@@ -323,6 +328,5 @@ fixtures = [
         ]
     }
 ]
-
 
 
